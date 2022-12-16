@@ -42,3 +42,19 @@ WHERE website is NULL;
 SELECT *
 FROM teachers
 WHERE phone is NOT NULL;
+
+BONUS:
+10. Selezionare tutti gli studenti il cui nome inizia per "E"
+SELECT *
+FROM students
+WHERE name LIKE 'e%';
+
+11. Contare tutti gli insegnanti che iniziano con “E” (suggerimento: guardate l’operatore COUNT).
+SELECT COUNT(*)
+FROM teachers
+WHERE name LIKE 'e%';
+
+12. Contare tutti gli insegnanti che non hanno un numero di telefono
+SELECT COUNT (*) AS 'no_phone_teachers'
+FROM teachers
+WHERE name LIKE 'e%';
