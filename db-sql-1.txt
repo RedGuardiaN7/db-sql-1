@@ -36,12 +36,12 @@ AND year = 1;
 8. Selezionare tutti i corsi(insegnamenti) che non hanno un sito web
 SELECT *
 FROM courses
-WHERE website is NULL;
+WHERE website IS NULL;
 
 9. Selezionare tutti gli insegnanti che hanno un numero di telefono
 SELECT *
 FROM teachers
-WHERE phone is NOT NULL;
+WHERE phone IS NOT NULL;
 
 BONUS:
 10. Selezionare tutti gli studenti il cui nome inizia per "E"
@@ -50,11 +50,11 @@ FROM students
 WHERE name LIKE 'e%';
 
 11. Contare tutti gli insegnanti che iniziano con “E” (suggerimento: guardate l’operatore COUNT).
-SELECT COUNT(*)
+SELECT COUNT(*) AS 'e_initial_teachers'
 FROM teachers
 WHERE name LIKE 'e%';
 
 12. Contare tutti gli insegnanti che non hanno un numero di telefono
 SELECT COUNT (*) AS 'no_phone_teachers'
 FROM teachers
-WHERE name LIKE 'e%';
+WHERE phone IS NULL;
